@@ -1,9 +1,9 @@
 import "./App.css";
-// import { useEffect, useState } from "react";
-// import OpenSeaDragon from "openseadragon";
+import { useEffect, useState } from "react";
+import OpenSeaDragon from "openseadragon";
 
 export default function App() {
-  // const [viewer, setViewer] = useState(null);
+  const [viewer, setViewer] = useState(null);
 
   // const InitOpenseadragon = () => {
   //   viewer && viewer.destroy();
@@ -53,6 +53,6 @@ export default function App() {
         width: "800px",
         height: "800px"
       }}
-    >test</div>
+    ></div>
   );
 }
