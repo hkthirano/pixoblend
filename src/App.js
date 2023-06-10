@@ -17,11 +17,12 @@ export default function App() {
         constrainDuringPan: true,
         maxZoomPixelRatio: 2,
         minZoomLevel: 0.5,
-        visibilityRatio: 1,
+        visibilityRatio: 0.5,
         zoomPerScroll: 2,
         showNavigator: true,
         showRotationControl: true,
         sequenceMode: true,
+        showReferenceStrip: true,
         tileSources: [{
           type: "image",
           url: require("./images/mapExmpl.jpg"),
