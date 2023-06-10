@@ -19,6 +19,7 @@ export default function App() {
         minZoomLevel: 0.5,
         visibilityRatio: 1,
         zoomPerScroll: 2,
+        showNavigator: true,
         tileSources: {
           type: "image",
           url: require("./images/mapExmpl.jpg"),
