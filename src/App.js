@@ -21,10 +21,15 @@ export default function App() {
         zoomPerScroll: 2,
         showNavigator: true,
         showRotationControl: true,
-        tileSources: {
+        sequenceMode: true,
+        tileSources: [{
           type: "image",
           url: require("./images/mapExmpl.jpg"),
         },
+        {
+          type: "image",
+          url: require("./images/288_shinryoku_sky_6715.jpg"),
+        }],
         overlays: [
           {
             id: 'overlay1',
@@ -69,7 +74,7 @@ export default function App() {
         }}
       ></div>
       <div id="overlay1">
-        <p>Overlay</p>
+        <p>Init Overlay</p>
       </div>
     </>
   );
