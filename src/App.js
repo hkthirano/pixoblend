@@ -20,6 +20,7 @@ export default function App() {
         visibilityRatio: 1,
         zoomPerScroll: 2,
         showNavigator: true,
+        showRotationControl: true,
         tileSources: {
           type: "image",
           url: require("./images/mapExmpl.jpg"),
