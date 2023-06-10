@@ -4,6 +4,7 @@ import OpenSeaDragon from "openseadragon";
 
 export default function App() {
   const [viewer, setViewer] = useState(null);
+  const [overlay2, setOverlay2] = useState(false);
 
   const InitOpenseadragon = () => {
     viewer && viewer.destroy();
@@ -32,6 +33,23 @@ export default function App() {
       })
     );
   };
+
+  const ToggleOverlay = () => {
+    if (overlay2) {
+      viewer.removeOverlay("overlay2");
+    }
+    else {
+      var elt = document.createElement("div");
+      elt.id = "overlay2";
+      elt.innerText = "Toggle Overlay"
+      viewer.addOverlay({
+        element: elt,
+        location: new OpenSeaDragon.Point(0.05, 0.2)
+      })
+    }
+    setOverlay2(!overlay2)
+  }
+
   useEffect(() => {
     InitOpenseadragon();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -39,6 +57,7 @@ export default function App() {
 
   return (
     <>
+      <button onClick={() => ToggleOverlay()}>Toggle Overlay</button>
       <div
         className="App"
         id="openSeaDragon"
