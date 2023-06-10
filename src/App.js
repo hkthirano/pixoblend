@@ -21,7 +21,14 @@ export default function App() {
         tileSources: {
           type: "image",
           url: require("./images/mapExmpl.jpg"),
-        }
+        },
+        overlays: [
+          {
+            id: 'overlay1',
+            x: 0.05,
+            y: 0.05
+          }
+        ]
       })
     );
   };
@@ -31,13 +38,18 @@ export default function App() {
   }, []);
 
   return (
-    <div
-      className="App"
-      id="openSeaDragon"
-      style={{
-        width: "800px",
-        height: "800px"
-      }}
-    ></div>
+    <>
+      <div
+        className="App"
+        id="openSeaDragon"
+        style={{
+          width: "800px",
+          height: "800px"
+        }}
+      ></div>
+      <div id="overlay1">
+        <p>Overlay</p>
+      </div>
+    </>
   );
 }
